@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 114859936607399166}
   m_Layer: 0
   m_Name: Bot
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58,7 +58,6 @@ GameObject:
   - component: {fileID: 4334445431040312}
   - component: {fileID: 33571956479759196}
   - component: {fileID: 23446034049931576}
-  - component: {fileID: 136722272226599234}
   - component: {fileID: 114197819470425266}
   m_Layer: 0
   m_Name: Capsule
@@ -106,7 +105,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1303568739689686}
   m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: 1.81, y: 0.8, z: -1.9137459}
+  m_LocalPosition: {x: 1.81, y: 0.37, z: -1.9137459}
   m_LocalScale: {x: 0.45958975, y: 0.45958975, z: 0.4}
   m_Children:
   - {fileID: 4334445431040312}
@@ -350,14 +349,14 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!65 &65745391234258538
 BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1303568739689686}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 041ee08b3447e8249a1db995bf658278, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -391,16 +390,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   joystick: {fileID: 0}
   joyButton: {fileID: 0}
---- !u!136 &136722272226599234
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1425470345622724}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}

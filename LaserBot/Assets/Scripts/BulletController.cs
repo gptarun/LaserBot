@@ -19,13 +19,9 @@ public class BulletController : MonoBehaviour {
 
     void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.name.Contains("Cube"))
+        if (!col.gameObject.name.Contains("Wall"))
         {
-            var force = transform.position - col.transform.position;            
-            force.Normalize();
-            col.gameObject.GetComponent<Rigidbody>().AddForce(-force * 5000f);
-            //col.gameObject.GetComponent<Rigidbody>().transform.rotation *= Quaternion.Euler(-35, 0, 0);
-            //col.gameObject.GetComponent<Rigidbody>().AddForce(dir * amount);
+            col.gameObject.GetComponent<Rigidbody>().AddForce(transform.forward * 200);
         }
         Destroy(gameObject);
     }       

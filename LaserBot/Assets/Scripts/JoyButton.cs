@@ -5,6 +5,8 @@ using UnityEngine.EventSystems;
 
 public class JoyButton : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
 {
+
+    //To check jump button
     [HideInInspector]
     public bool Pressed;
     void Start () {
