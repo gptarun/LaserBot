@@ -12,7 +12,7 @@ public class ShootEnemy : MonoBehaviour {
     private float bulletCounter;
     public Transform firePoint;
 
-    public float fireRate = 0.15F;
+    public float fireRate = 0.3F;
     private float nextFire = 0.0F;
 
     public ParticleSystem particleEffect;
@@ -43,6 +43,6 @@ public class ShootEnemy : MonoBehaviour {
     public void launchParticle(Vector3 position)
     {
         Instantiate(particleEffect, position, Quaternion.identity);
-        Destroy(GameObject.FindWithTag("Particle"),0.4f);
+        Destroy(GameObject.FindWithTag("Particle"),0.25f);
     }
 }

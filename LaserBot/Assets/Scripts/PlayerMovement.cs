@@ -12,7 +12,6 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         joystick = FindObjectOfType<Joystick>();
-        Debug.Log("Starting - " + joystick.Horizontal + " " + joystick.Vertical);
         joyButton = FindObjectOfType<JoyButton>();
     }
 
@@ -30,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
             rigidbody.MoveRotation(newRotation);            
         }
 
-        if (!jump && joyButton.Pressed && rigidbody.position.y >= -1.0 && rigidbody.position.y <= 1.0 && jumpCount < 2)
+        if (!jump && joyButton.Pressed && rigidbody.position.y >= -0.5 && rigidbody.position.y <= 0.4 && jumpCount < 2)
         {
             rigidbody.velocity += Vector3.up * 4.0f;
             jump = true;
@@ -38,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (jump && !joyButton.Pressed)
         {
-            jump = false;
+            jump = false;        
             jumpCount = 0;
         }
     }

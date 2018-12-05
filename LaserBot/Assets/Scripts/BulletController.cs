@@ -22,7 +22,7 @@ public class BulletController : MonoBehaviour {
     {
         if (!col.gameObject.name.Contains("Wall"))
         {
-            col.gameObject.GetComponent<Rigidbody>().AddForce(transform.forward * 200);
+            col.gameObject.GetComponent<Rigidbody>().AddForce(transform.forward * 300);
             shootEnemy.launchParticle(transform.position);
         }
         Destroy(gameObject);
