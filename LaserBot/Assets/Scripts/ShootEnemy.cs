@@ -15,6 +15,7 @@ public class ShootEnemy : MonoBehaviour {
     public float fireRate = 0.15F;
     private float nextFire = 0.0F;
 
+    public ParticleSystem particleEffect;
     // Use this for initialization
     void Start () {
         tapFire = FindObjectOfType<TapFire>();
@@ -38,5 +39,10 @@ public class ShootEnemy : MonoBehaviour {
             newBullet.transform.rotation *= Quaternion.Euler(-90, 0, 0);
             newBullet.speed = bulletSpeed;
         }
+    }
+    public void launchParticle(Vector3 position)
+    {
+        Instantiate(particleEffect, position, Quaternion.identity);
+        Destroy(GameObject.FindWithTag("Particle"),0.4f);
     }
 }

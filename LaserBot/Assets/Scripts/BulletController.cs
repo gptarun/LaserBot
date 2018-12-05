@@ -6,10 +6,11 @@ public class BulletController : MonoBehaviour {
 
     public float speed = 5f;
     public float amount = 1000f;
-    // Use this for initialization
+    public bool isCollided = false;
+    ShootEnemy shootEnemy;
     void Start () {
-		
-	}
+        shootEnemy = FindObjectOfType<ShootEnemy>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -22,6 +23,7 @@ public class BulletController : MonoBehaviour {
         if (!col.gameObject.name.Contains("Wall"))
         {
             col.gameObject.GetComponent<Rigidbody>().AddForce(transform.forward * 200);
+            shootEnemy.launchParticle(transform.position);
         }
         Destroy(gameObject);
     }       

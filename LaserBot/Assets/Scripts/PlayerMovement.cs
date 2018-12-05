@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
             rigidbody.MoveRotation(newRotation);            
         }
 
-        if (!jump && joyButton.Pressed && rigidbody.position.y >= -1.0 && rigidbody.position.y <= 0.5 && jumpCount < 2)
+        if (!jump && joyButton.Pressed && rigidbody.position.y >= -1.0 && rigidbody.position.y <= 1.0 && jumpCount < 2)
         {
             rigidbody.velocity += Vector3.up * 4.0f;
             jump = true;
